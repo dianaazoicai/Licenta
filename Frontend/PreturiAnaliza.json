@@ -1,0 +1,65 @@
+[
+    {
+        "categorie":"HEMATOLOGIE",
+        "nume":["APTT","Crioglobine","Determinare de grup sanguin ABO","Determinare de grup sanguin Rh","Examen citologic al frotiului sanguin periferic","Fibrinogen","Hemoleucograma completă",
+        "Reticulocite","Timp de coagulare","Timp de sângerare","Timp Quick , activitate de protrombină (IP) si  INR",
+        "V.S.H."],
+        "pret":[18,12,15,15,18,19,20,20,8,8,16,8],
+        "durata":[1,2,1,1,1,1,1,1,1,1,1,1]
+    },
+    {
+        "categorie":"BIOCHIMIE",
+        "nume":["Acid uric seric","Amilazemie","Bilirubina totală","Bilirubina directă","Colesterol seric total","Complement C3","Complement C4","Creatin kinaza(CK)","Creatina serică","Electoforeza proiteinelor serice","Feritina","Fosfataza alcalină","Fosfor","Gama GT",
+            "Glicemie","HDL colesterol","Hemoglobina glicozilata","Ionograma(Na,K,Cl,pH)","LDH(Lactat dehidrogenaza)","LDL colesterol","Lipide totale serice","Magneziemie","Proteine totale serice","Sideremie(Fe)","TGO","TGP","Trigliceride serice","Ureea serică"],
+        "pret":[11,14,11,11,10,11,35,35,17,11,35,40,13,13,11,10,15,35,30,13,10,10,11,11,13,11,11,11,11],
+        "durata":[1,1,1,1,1,1,1,1,1,1,"1-3",1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]
+    },
+    {
+        "categorie":"HORMONI",
+        "nume":["Ac anti TG(Chemiluminiscenta","Ac anti TPO(Chemiluminiscenta","Calcitonina","Cortizol seric","Cortizol urinar","Estradiol II(ELFA)","FSH(ELFA)","FT4(Chemiluminiscenta)","LH(ELFA)","Progesteron(Chemiluminiscenta)","Prolactina(ELFA)","PTH(Chemiluminiscenta)","Testosteron(ELFA)","Total Beta hCG(Chemiluminiscenta)","TSH(Chemiluminiscenta)"],
+        "pret":[44,45,65,40,40,42,42,40,42,42,42,45,42,45,40],
+        "durata":[5,5,5,5,5,5,5,1,5,5,5,5,5,5,1]
+    },
+    {
+        "categorie":"IMUNOLOGIE",
+        "nume":["Alergotest cantitativ mixt","Alergotest cantitativ pediatric","ASLO cantitativ","ASLO semicantitativ","Confirmare TPHA","Factor reumatoid cantitativ","Factor reumatoid semicantitativ","Feritina","Ig E serica","Ig M serica","IgA serica","IgG serica","Proteina C reactivă cantitativ","Proteina C reactivă semicantitativ","VDRL/RPR"],
+        "pret":[220,220,25,10,20,25,10,40,35,35,35,35,25,10,15],
+        "durata":[1,1,1,1,1,1,1,1,5,1,1,1,1,1,1]
+    },
+    {
+        "categorie":"IMUNOLOGIE - MARKERI TUMORALI",
+        "nume":["AFP-Alfafetoproiteina-(ELFA)","CA 15-3(ELFA)","CA 19-9(ELFA)","CA 125(Chemiluminiscenta)","CEA","Free PSA(Chemiluminiscenta)","PSA(Chemiluminiscenta)"],
+        "pret":[45,50,50,50,45,45,45],
+        "durata":[5,5,5,5,5,1,1]
+    },
+    {
+        "categorie":"IMUNOLOGIE - MARKERI INFECȚIOȘI",
+        "nume":["Ac HBs (Chemiluminiscenta)","Ac HCV (Chemiluminiscenta)","Ac HCV (Test rapid)","Anti HIV(Test rapid)","Anticorpi HIV(Chemiluminiscenta)","Antigen HBs(Test rapid)","Antigen HBs(Chemiluminiscenta)","Ac Helicobacter Pylori-(Chemiluminiscenta)","Anti Helicobacter Pylori IgG(Test rapid)"],
+        "pret":[45,55,30,30,45,30,40,40,30],
+        "durata":[5,"1-3",1,1,"1-3",1,"1-3","1-3",1]
+    },
+    {
+        "categorie":"ANALIZE DE URINA",
+        "nume":["Amilazurie","Dozare calciu in urina","Dozare creatinina in urina","Dozare glucoza urinara","Dozare proteine urinare","Dozare uree urinara","Examen complet de urina(sumar+sediment)","Microalbumina","Urocultura"],
+        "pret":[13,12,12,12,12,12,20,20,40],
+        "durata":[1,1,1,1,1,1,1,1,"1-3"]
+    },
+    {
+        "categorie":"EXAMENE MATERII FECALE",
+        "nume":["Coprocultura(cultura+antibiograma)","Depistare Giardia scaun","Depistare rotavirus","Depistare Helicobacter pylori scaun","Examen coproparazitologic","Reactia Adler(Hemoragii oculte)"],
+        "pret":[40,30,30,30,15,20],
+        "durata":["2-5",1,1,1,1,1]
+    },
+    {
+        "categorie":"EXAMENE BACTERIOLOGICE",
+        "nume":["Exsudat faringian (cultur + antibiograma","Exsudat faringian – cultură  fungi+antifungigrama)","Exsudat nazal( cultura+antibiograma)","Secretie uretrala (cultura+antibiograma)","Secretie otica (cultura+antibiograma)"],
+        "pret":[36,36,36,50,50],
+        "durata":["2-4","2-4","2-4",2,2]
+    },
+    {
+        "categorie":"EXAMENE DIN SECRETII VAGINALE/URETRALE",
+        "nume":["Cultura bacterii aerobe+antibiograma","Cultură Fungi+antifungigrama","Examen  microscopic  colorat","Examen  microscopic nativ","Secretie oculara (cultura+antibiograma)","Spermograma"],
+        "pret":[50,35,18,18,50,100],
+        "durata":[2,2,1,1,2,1]
+    }
+]

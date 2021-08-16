@@ -1,0 +1,56 @@
+[
+    {
+        "nume":"Alergologie și imunologie",
+        "pret":"150 lei"
+        
+    },
+    {
+        "nume":"Cardiologie",
+        "pret":"140 lei"
+        
+    },
+    {
+        "nume":"Dermatologie",
+        "pret":"100 lei"
+        
+    },
+    {
+        "nume":"Endocrinologie",
+        "pret":"150 lei"
+        
+    },
+    {
+        "nume":"Gastroenterologie",
+        "pret":"140 lei"
+        
+    },
+    {
+        "nume":"Ginecologie",
+        "pret":"150 lei"
+        
+    },
+    {
+        "nume":"Neurologie",
+        "pret":"120 lei"
+        
+    },
+    {
+        "nume":"Pediatrie",
+        "pret":"100 lei"
+        
+    },
+    {
+        "nume":"Psihologie",
+        "pret":"120 lei"
+        
+    },
+    {
+        "nume":"Medicina generală",
+        "pret":"200 lei"
+    },
+    
+    {
+        "nume":"Reumatologie",
+        "pret":"130 lei"
+    }
+]
