@@ -1,0 +1,36 @@
+<div class="preturi">
+<table class="tb1">
+    <tr>
+        <th>Denumire serviciu</th>
+        <th>Pret serviciu</th>
+    </tr>
+    <% for(let i=0;i<Preturi.length;i++) { %>
+        <tr>
+            <td> <%- Preturi[i].nume %></td>
+            <td><%- Preturi[i].pret %></td>
+        </tr>
+    <% } %>
+</table>
+<br>
+<table class="tb2">
+    <tr>
+        <th>Denumire Investigație</th>
+        <th>Preț serviciu(lei)</th>
+        <th>Timp de execuție(zile)</th>
+    </tr>
+    <% for(let i=0;i<PreturiAnaliza.length;i++) { %>
+        <tr>
+            <th> <%- PreturiAnaliza[i].categorie %></th>
+        </tr>
+        <% for(let j=0;j<PreturiAnaliza[i].nume.length;j++) { %>
+            <tr>
+                <td><%- PreturiAnaliza[i].nume[j] %></td>
+                <td><%- PreturiAnaliza[i].pret[j] %></td>
+                <td><%- PreturiAnaliza[i].durata[j] %></td>
+            </tr>
+        <% } %>
+    <% } %>
+</table>
+<br>
+<p>** Hemoleucograma completă cuprinde:hemoglobină, hematocrit, numărătoare eritrocite, numărătoare leucocite, numărătoare trombocite, formulă leucocitară, indici eritrocitari</p>
+</div>

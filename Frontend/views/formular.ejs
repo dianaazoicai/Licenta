@@ -1,0 +1,32 @@
+<div>
+    <form >
+        <label>Nume și prenume: </label>
+        <input><br>
+        <label>CNP: </label>
+        <input><br>
+        <label>Adresa: </label>
+        <input><br>
+        <label>Telefon:  </label>
+        <input><br>
+        <label>Email: </label>
+        <input><br>
+        <label for="specializare" >Alege specializarea pentru programare: </label>
+        <input list="specializari" name="specializare" id="specializare">
+        <datalist id="specializari">
+            <option value = "Chirurgie">
+            <option value = "Cardiologie">
+        </datalist>
+        <br>
+        <label for="medic">Alege doctorul la care vrei să faci programarea: </label>
+        <input list="medici" name="medic" id="medic">
+        <datalist id="medici">
+            <option value="Popescu Ion">
+            <option value="Grigore Constantin">
+        </datalist>
+        <br>
+        <label for="programare">Data programării: </label>
+        <input type="date" id="programare" name="programare"> 
+        <br><br>
+        <input type="submit" value="Confirmare programare">
+    </form>
+</div>
