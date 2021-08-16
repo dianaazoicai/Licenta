@@ -1,0 +1,40 @@
+html{
+    background-color:#C1C8E4
+}
+header{
+    text-align: center;
+    font-size: 1.8em;
+}
+nav{
+    text-align: center;
+    margin: 15px;
+    padding: 15px;
+    text-decoration: none;
+
+}
+nav a{
+    margin: 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+.confidentialitate{
+    margin:50px;
+}
+
+.preturi{
+    text-align: center
+    
+}
+.tb1{
+    margin-left:650px;
+    margin-bottom: 50px;
+}
+.tb2{
+    margin-left:450px;
+}
+table{
+    border-collapse: collapse;
+}
+table, th,tr,td {
+    border: 1px solid black;
+  }
