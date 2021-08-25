@@ -30,4 +30,11 @@ public class PacientDAO implements IPacientDAO {
         String query="select * from pacienti";
         return jdbcTemplate.query(query,pacientMapper);
     }
+
+    @Override
+    public List<PacientModel> getPacientByCNP(String CNP) {
+        String query="select * from pacienti where CNP=?";
+        var result= jdbcTemplate.query(query,pacientMapper,CNP);
+        return result;
+    }
 }
