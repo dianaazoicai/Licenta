@@ -6,6 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.xml.ws.Response;
+
 @RestController
 public class PacientController {
     @Autowired
@@ -25,5 +27,11 @@ public class PacientController {
     public ResponseEntity<?>addPacient(@RequestBody PacientModel model){
         var result = pacientDAO.addPacient(model);
         return ResponseEntity.status(200).body(result);
+    }
+    @RequestMapping(value="/api/pacients/{CNP}", method = RequestMethod.GET)
+    public ResponseEntity<?>getPacientByCNP(@PathVariable String CNP){
+        var result =pacientDAO.getPacientByCNP(CNP);
+        return ResponseEntity.status(200).body(result);
+
     }
 }
