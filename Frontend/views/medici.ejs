@@ -1,1 +1,14 @@
-<p>to do</p>
+<div>
+    <table>
+        <tr>
+            <th>Nume doctor</th>
+            <th>Specializare doctor</th>
+        </tr>
+        <% for(let i=0;i<medici.length;i++) { %>
+            <tr>
+                <td> <%- medici[i].nume_doctor %></td>
+                <td><%- medici[i].specializare %></td>
+            </tr>
+        <% } %>
+    </table>
+</div>

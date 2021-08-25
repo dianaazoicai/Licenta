@@ -1,0 +1,26 @@
+<div id="signUp">
+    <form action="/adauga_client" method="POST">
+        <label>Nume și prenume:</label>
+        <input type="text" id="nume_pacient" name="nume" autocomplete="on" required pattern="^[a-zA-Z\s]{10,30}$">
+        <br>
+        <label>CNP</label>
+        <input type="text" id="CNP" name="cnp" autocomplete="off" required pattern="^[0-9]{13}$" title="CNP-ul trebuie să conțină doar 13 cifre.">
+        <br>
+        <label>Telefon</label>
+        <input type="telefon" id="tel" name="telefon" required pattern="^[0-9]{10}$" title="Numărul de telefon trebuie să fie format din 10 cifre.">
+        <br>
+        <label>Adresa</label>
+        <textarea id="adresa"cols="80" rows="5" name="adresa" value="address" required pattern="^[a-zA-Z0-9 /s]$"></textarea>
+        <br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="Inserează o adresă de email validă.">
+          
+        <br>
+        <label for="pwd">Password:</label>
+        <input type="password" id="pwd" name="pwd" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Parola dumneavoastră trebuie să conțină cel puțin 8 caractere, dintre care cel puțin o cifră, o literă mică și o literă mare." onchange='Validate();'>
+        <br>
+        <label>Confirmare parola</label>
+        <input type="password" id="rpwd" name="rpwd" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Parola dumneavoastră trebuie să conțină cel puțin 8 caractere, dintre care cel puțin o cifră, o literă mică și o literă mare." onchange='Validate();'>
+        <input id="submit" type="submit" value="Inregistrare" disabled>
+    </form>
+</div>
