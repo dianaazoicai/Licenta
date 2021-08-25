@@ -9,5 +9,6 @@ import java.util.List;
 public interface IPacientDAO {
     Integer addPacient(PacientModel pacientModel);
     List<PacientModel> getAllPacients();
+    List<PacientModel> getPacientByCNP(String CNP);
 
 }
