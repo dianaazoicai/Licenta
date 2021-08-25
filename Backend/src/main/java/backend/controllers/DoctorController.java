@@ -1,37 +1,38 @@
 package backend.controllers;
 import backend.interfaces.IDoctorsDAO;
-import backend.models.DoctorModel;
+import backend.models.Doctor;
+import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 
 @RestController
+@RequestMapping(value = "api/doctors", produces = MediaType.APPLICATION_JSON_VALUE)
 public class DoctorController {
+
+    @Qualifier("doctorsDAO")
     @Autowired
-    private final IDoctorsDAO doctorDAO;
+    private IDoctorsDAO doctorDAO;
 
-    public DoctorController(IDoctorsDAO doctorDAO) {
-        this.doctorDAO = doctorDAO;
-    }
-
-    @GetMapping("/api/doctors")
+    @GetMapping()
     @ResponseBody
-    public ResponseEntity<?>getDoctors(){
-        var result =doctorDAO.getAllDoctors();
-        return ResponseEntity.status(200).body(result);
+    public ResponseEntity<List<Doctor>> getDoctors(){
+        List<Doctor> doctorList = doctorDAO.getAllDoctors();
+        return ResponseEntity.status(200).body(doctorList);
     }
-    @GetMapping(value="/api/doctors/{specializare}")
+    @GetMapping(value="/{specialization}")
     @ResponseBody
-    public ResponseEntity<?>getDoctorBySpecialization(@PathVariable String specializare){
-        var result =doctorDAO.getDoctorBySpecialization(specializare);
-        return ResponseEntity.status(200).body(result);
+    public ResponseEntity<List<Doctor>>getDoctorBySpecialization(@PathVariable String specialization){
+        List<Doctor> doctorList = doctorDAO.getDoctorBySpecialization(specialization);
+        return ResponseEntity.status(200).body(doctorList);
 
     }
-    @PostMapping(value="/api/doctors/add")
-
-    public ResponseEntity<?>addDoctor(@RequestBody DoctorModel model){
-        var result = doctorDAO.addDoctor(model);
+    @PostMapping(value="/add")
+    public ResponseEntity<?>addDoctor(@RequestBody Doctor doctor){
+        var result = doctorDAO.addDoctor(doctor);
         return ResponseEntity.status(200).body(result);
     }
 

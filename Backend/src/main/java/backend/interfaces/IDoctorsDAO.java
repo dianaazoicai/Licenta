@@ -1,13 +1,13 @@
 package backend.interfaces;
 
-import backend.models.DoctorModel;
+import backend.models.Doctor;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
 @Repository
 public interface IDoctorsDAO {
-    Integer addDoctor(DoctorModel doctorModel);
-    List<DoctorModel> getAllDoctors();
-    List<DoctorModel> getDoctorBySpecialization(String specializare);
+    Integer addDoctor(Doctor doctor);
+    List<Doctor> getAllDoctors();
+    List<Doctor> getDoctorBySpecialization(String specialization);
 }

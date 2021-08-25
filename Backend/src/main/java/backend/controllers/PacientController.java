@@ -1,37 +1,37 @@
 package backend.controllers;
 
-import backend.interfaces.IPacientDAO;
-import backend.models.PacientModel;
+import backend.interfaces.IPatientDAO;
+import backend.models.Patient;
+import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import javax.xml.ws.Response;
-
 @RestController
+@RequestMapping(path = "api/pacients", produces = MediaType.APPLICATION_JSON_VALUE)
 public class PacientController {
+
+    @Qualifier("patientDAO")
     @Autowired
-    private final IPacientDAO pacientDAO;
+    private IPatientDAO pacientDAO;
 
-    public PacientController(IPacientDAO pacientDAO) {
-        this.pacientDAO = pacientDAO;
+    @GetMapping()
+    public ResponseEntity<List<Patient>> getPacients(){
+        List<Patient> patientList = pacientDAO.getAllPatients();
+        return ResponseEntity.status(200).body(patientList);
     }
 
-    @RequestMapping(value="/api/pacients", method = RequestMethod.GET)
-    public ResponseEntity<?> getPacients(){
-        var result = pacientDAO.getAllPacients();
+    @PostMapping
+    public ResponseEntity<?>addPacient(@RequestBody Patient model){
+        var result = pacientDAO.addPatient(model);
         return ResponseEntity.status(200).body(result);
     }
-
-    @RequestMapping(value="/api/pacients/add",method = RequestMethod.POST)
-    public ResponseEntity<?>addPacient(@RequestBody PacientModel model){
-        var result = pacientDAO.addPacient(model);
-        return ResponseEntity.status(200).body(result);
-    }
-    @RequestMapping(value="/api/pacients/{CNP}", method = RequestMethod.GET)
-    public ResponseEntity<?>getPacientByCNP(@PathVariable String CNP){
-        var result =pacientDAO.getPacientByCNP(CNP);
-        return ResponseEntity.status(200).body(result);
+    @GetMapping(value="/{CNP}")
+    public ResponseEntity<List<Patient>>getPacientByCNP(@PathVariable String CNP){
+        List<Patient> patientList = pacientDAO.getPatientByCNP(CNP);
+        return ResponseEntity.status(200).body(patientList);
 
     }
 }

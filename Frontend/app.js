@@ -6,7 +6,7 @@ const expressLayouts= require('express-ejs-layouts');
 const bodyParser = require('body-parser');
 const fetch = require('node-fetch');
 const app=express();
-const port =2201;
+const port = 2201;
 
 // directorul 'views' va conține fișierele .ejs (html + js executat la server)
 app.set('view engine', 'ejs');
