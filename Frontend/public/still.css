@@ -38,3 +38,11 @@ table{
 table, th,tr,td {
     border: 1px solid black;
   }
+
+  input:invalid {
+    border-color: red;
+}
+input,
+input:valid {
+    border-color: #ccc;
+}
